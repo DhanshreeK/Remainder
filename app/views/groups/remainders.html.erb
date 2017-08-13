@@ -1,0 +1,44 @@
+
+<div class="row">
+  <div class="box col-md-12">
+    <div class="box-inner">
+      <div class="box-header well"></div>
+      <div class="box-content">
+<h1>Listing Remainders</h1>
+
+ <table id="datatable" class="table table-striped table-bordered responsive">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Remainder time</th>
+      <th>Schedule interval</th>
+      <th>Message</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @remainders.each do |remainder| %>
+      <tr>
+        <td><%= remainder.name %></td>
+        <td><%= remainder.start_date %></td>
+        <td><%= remainder.end_date %></td>
+        <td><%= remainder.remainder_time %></td>
+        <td><%= remainder.schedule_interval %></td>
+        <td><%= remainder.message %></td>
+        <td><%= remainder.status %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Back', groups_path%>
+</div>
+</div>
+</div>
+

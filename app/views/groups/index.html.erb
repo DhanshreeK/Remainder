@@ -1,0 +1,30 @@
+<div class="">
+  <h1 class = "title">Listing Groups</h1>
+  <table id="groups" class="table table-bordered wrapper">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Contact</th>
+        <th>Action</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @groups.each do |group| %>
+        <tr>
+          <td><%= link_to group.name.titleize,new_group_remainder_path(group) %></td>
+          <td><%= group.status %></td>
+           <td><%= group.contact %></td>
+          <td><%= link_to "Edit", edit_group_path(group), class: "btn btn-primary"  %></td>
+          <td><%= link_to "Delete", group, method: :delete, data: { confirm: 'Are you sure?'} , class: "btn btn-danger" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="text-center">
+  <%= link_to "Create New Group", new_group_path, class: "btn btn-success" %>
+  </div>
+</div>
+

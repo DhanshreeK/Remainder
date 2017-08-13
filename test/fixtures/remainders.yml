@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  start_date: 2016-03-14
+  end_date: 2016-03-14
+  remainder_time: 2016-03-14 11:12:33
+  schedule_interval: MyString
+  message: MyText
+  status: false
+
+two:
+  name: MyString
+  start_date: 2016-03-14
+  end_date: 2016-03-14
+  remainder_time: 2016-03-14 11:12:33
+  schedule_interval: MyString
+  message: MyText
+  status: false
